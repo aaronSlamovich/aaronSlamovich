@@ -71,8 +71,22 @@
         to the finished result. Code can be found here: https://github.com/aaronSlamovich/NucleoDepot</p>
         <h3>RGB-animated motion-responsive "gamer pants"</h3>
         <h3>RGB-animated motion-responsive pants</h3>
-        <p></p>
+        <p>For this project my mom helped me by sewing RGB strips to my pant legs using light diffusing fabric. I placed accelerometers
+        at the base of the pant legs to detect when a step was taken. The accelerometers communicated with an arduino stored  in an
+        extra pocket near the pant legs that would record when a step was taken. It took me significant time to fine tune
+        my program for detecting steps. The arduino would take a moving average of data points from the accelerometers and when a new data point
+        exceeded the average significantly the arduino would trigger a rainbow RGB animation I programmed using an RGB library.</p>
+        <img src="led pants.png">
         <h3>GameBoy MP3 Player</h3>
+        <p>I always had an interest in retro game consoles so I decided it would be cool to build a retro MP3 player inside
+        a retro GameBoy shell. I used an arduino nano to control an MP3 module that could read music off a micro SD card
+            and send to an audio jack. I used a capacitive touch button plate to read inputs from the controls on the front
+            panel of the MP3 player so the user could interface with it as if it were a real GameBoy. Unfortunately I couldn't find
+            an OLED panel the correct size so I added a smaller panel into the viewing window so the user could see what track they
+            were listening to. The project is powered by four AA batteries. One challenge was getting all these components to fit inside
+            the GameBoy shell. I had to organze them well on a perf board because I didn't know how to make PCB's at the time, but if I were
+        to do the project again I would make a custom PCB for it.</p>
+        <img src="gameboyMP3.png">
     </section>
 </body>
 </html>
