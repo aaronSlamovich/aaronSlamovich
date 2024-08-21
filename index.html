@@ -15,7 +15,7 @@
             astrophotography, amateur radio, tinkering with circuits and Arduinos and plenty more. This webpage is my own documentation
             of anything I do that I personally deem to be "cool enough" to put on the internet. I hope anyone viewing this will find
             interest in my projects, and If you have any questions, comments or want to get in touch with me for any reason, please email
-            me at slamovichaaron@gmail.com!</p>
+            me at slamovichaaron@gmail.com.</p>
     </section>
     <section>
         <h2>Projects</h2>
@@ -47,10 +47,32 @@
         to send it flying.</p>
         <img src="nerf_mod.png">
         <h3>Heartbeat Detector</h3>
-        <h3>DC Motor Driver PCB</h3>
+        <p>I made this project with my lab partner as a final project in our electrical engineering fundamentals lab. The conceptual
+        founation behind the monitor is that each heartbeat will cause body tissue to flush with blood. The amount of infrared light
+        passing through the finger is measured with the idea that an increase in blood will absorb more light allowing us to detect
+        each heartbeat by an increase in IR absorbance. An infrared LED is used as a light source and an infrared photo-resistor
+        is used as the infrared sensor. I used the photo-resistor as part of a voltage divider so that the voltage would change as the
+        resistance of the photo-resistor changed with the amount of infrared absorbance. This provided a small spike in voltage with each
+        heartbeat, but the signal was obscured by background noise such as RF signals and static discharge. To "clean" the input signal
+        I added a low-pass filter with a center frequency of 100 HZ (the assumed upper limit of my resting heart rate) and a high-pass
+        filter with a center frequency of 40 HZ (the assumed lower limit of my resting heart rate). Finally, I added hysteresis as the
+        last part of my signal processing. This compared the current signal to a moving average of the signal's history. I used a comparator
+            made with an opamp to compare the current signal to its hysteresis. If there was a significant difference the comparator
+            would act as the simplest possible analog to digital converter and provide a pulse of current to light an indicator LED.</p>
+        <img src="heartbeat_detector.png">
+        <img src="signal_output.png">
+        <p>The image above displays the digital output of the comparator in orange and the output of the filtered signal in blue.</p>
         <h3>Genetic Data Base</h3>
+        <p>I used Ruby on Rails and PostgreSQL to design the front end and backend of a genetic database storing over 20,000 genes
+        including information on targeted drugs and common gene mutations. Before building this project I had only made
+        static webpages before with HTML and CSS, so I had to learn a lot on the fly. One of the challenges I faced was finding a way
+        to load so much data onto the website. I couldn't type all the information in by hand so I wrote python scripts to
+        take CSV files and automatically load them into my database, so I could run the process before I went to bed and wake up
+        to the finished result. Code can be found here: https://github.com/aaronSlamovich/NucleoDepot</p>
         <h3>RGB-animated motion-responsive "gamer pants"</h3>
-        <h3>Gameboy MP3 Player</h3>
+        <h3>RGB-animated motion-responsive pants</h3>
+        <p></p>
+        <h3>GameBoy MP3 Player</h3>
     </section>
 </body>
 </html>
