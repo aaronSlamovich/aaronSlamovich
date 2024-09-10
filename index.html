@@ -30,12 +30,20 @@
         <img src="guitar_pedal.jpg">
         </section>
         <section>
-        <h3>"Listening" to the sun and trying to talk to astronauts</h3>
+        <h3>Receiving and Decoding NOAA Satellite Transmissions</h3>
         <p>I recently got my HAM radio technician license (callsign KE9AVI) and I've been using what I've learned to have fun with radio in general including *attempting* to talk
-        to astronauts on the ISS and "listening" to the sun. The image below is a yagi-uda antenna I built out of PVC tube and tape measure, a
-        common DIY design on the internet. I combined it with my SDR radio and SDR++ software to try listening to the sun.
-        I managed to get modest results with noise strength increasing by a few decibles when I pointed my antenna towards the sun.
-        This experiment is not what I would call scientifically rigorous but it was lots of fun.</p>
+        to astronauts on the ISS but also eavesdropping on satellites passing overhead. So far I've targeted the NOAA satellites and picked up Automatic Picture Transmission (APT)
+        signals with a Yagi-Uda antenna I built myself over the summer. APT is an old technology built back in the 1960's, so it's functionally obsolete but fun to play with.
+        It uses analog tones to encode images and beams them down at 137 MHz for anyone who happens to be listening. Because of modern technology it is very cheap to receivie these
+        signals yourself. With a laptop, a software defined radio dongle (SDR), free SDR software, and an antenna made of PVC and tape measures you can receive and decode images of
+        the earth by yourself. In my SDR software I simply make a recording of a sufficiently long sample of the signal and import it to a
+        free decoding software that turns it into an image. If you want to hear what the signals sound like (kinda eerie), I've included a sample down below along with the resulting image
+        and the antenna I built and used.</p>
+        <audio controls>
+        <source src="andrew_signal_sample.wav" type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+        <img src="NOAA_18.jpg">
         <img src="yagi_uda.jpg">
         </section>
         <section>
@@ -43,7 +51,7 @@
         <p>I wanted to make something my middle-school self would be proud of,
         so I made a NERF gun mod to automatically shoot at my brother so I wouldn't have to press the trigger (it works on any
         person though). I used the NERF Modulus as the base for my mod because it was a convenient size and already had fly wheels
-        in it so it was semi-automatic. My challenge was modifying it to be fully automatic. A webcam at the front of the blaster
+        in it, so it was semi-automatic. My challenge was modifying it to be fully automatic. A webcam at the front of the blaster
         sends a video stream to an onboard raspberry pi running a TFLite object detection model. I used open cv to track the bounding
         boxes of the people detected in the video stream and wrote a python script using a gpio library to actuate a servo when the
         bounding box of a person was near the center of the frame. I had to remove some plastic scaffolding inside the gun to be able to
